@@ -189,3 +189,4 @@ while pontos < 1000000:
     print('\033[0;36mQUESTÃO 1')
     print('\033[0m-'*30)
 
+#  babana
