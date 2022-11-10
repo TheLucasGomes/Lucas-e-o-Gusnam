@@ -32,40 +32,40 @@ Digite qual opção você acha que é a certa:'''))
         elif rus == 'S' or rus == 's':
             break
         elif rus == 'J' or rus == 'j':
-                if ajudas > 0:
-                    ajudas -= 1
-                    ajd = funcoes.gera_ajuda(quest1)
-                    print(ajd)
-                    rus2 = str(input('Digite qual opção você acha que é a certa:'))
-                    if rus2 == quest1['correta']:
-                        pontos += 1000
-                        print(rus2)
-                        print('Certa resposta!')
-                        cont += 1
-                    elif rus2 == 'p' or rus2 == 'P':
-                        pulos -= 1
-                        print(rus2)
-                        print('Questão pulada :( ')
-                    else:
-                        print(rus2)
-                        print('Errou')
-                        break
+            if ajudas > 0:
+                ajudas -= 1
+                ajd = funcoes.gera_ajuda(quest1)
+                print(ajd)
+                rus2 = str(input('Digite qual opção você acha que é a certa:'))
+                if rus2 == quest1['correta']:
+                    pontos += 1000
+                    print(rus2)
+                    print('Certa resposta!')
+                    cont += 1
+                elif rus2 == 'p' or rus2 == 'P':
+                    pulos -= 1
+                    print(rus2)
+                    print('Questão pulada :( ')
                 else:
-                    print('sem ajudas restantes')
-                    rus2 = str(input('Digite qual opção você acha que é a certa:'))
-                    if rus2 == quest1['correta']:
-                        pontos += 1000
-                        print(rus2)
-                        print('Certa resposta!')
-                        cont += 1
-                    elif rus2 == 'p' or rus2 == 'P':
-                        pulos -= 1
-                        print(rus2)
-                        print('Questão pulada :( ')
-                    else:
-                        print(rus2)
-                        print('Errou')
-                        break
+                    print(rus2)
+                    print('Errou')
+                    break
+            else:
+                print('sem ajudas restantes')
+                rus2 = str(input('Digite qual opção você acha que é a certa:'))
+                if rus2 == quest1['correta']:
+                    pontos += 1000
+                    print(rus2)
+                    print('Certa resposta!')
+                    cont += 1
+                elif rus2 == 'p' or rus2 == 'P':
+                    pulos -= 1
+                    print(rus2)
+                    print('Questão pulada :( ')
+                else:
+                    print(rus2)
+                    print('Errou')
+                    break
 
         elif rus == 'P' or rus == 'p':
             pulos -= 1
