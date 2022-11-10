@@ -127,7 +127,7 @@ while pontos < 1000000:
             para parar o jogo digite "S"\n
             Digite qual opção você acha que é a certa:'''))
             if rus == quest1['correta']:
-                pontos = 1000
+                pontos = 1000 # precisa arrumar sistema de pontos
                 print(rus)
                 print('Certa resposta!')
                 cont += 1
