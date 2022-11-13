@@ -26,7 +26,7 @@ print('você tem direito a 3 DICAS e 2 PULOS')
 sleep(1)
 print('o jogo acaba se errar ou chegar aos 1000000 pontos')
 sleep(1)
-print('vamos começar?')
+print('vamos começar?\n')
 sleep(1)
 while pontos < 1000000:
     if pontos == 0:
