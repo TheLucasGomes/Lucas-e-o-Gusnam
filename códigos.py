@@ -191,7 +191,7 @@ while pontos < 1000000:
 
         if key_word == 'babana':
             break
-jogar = str(input(f'Sua pontuação dessa vez foi de \033[0;33m{pontos}\033[0m\nVocê quer jogar(de novo)? S/N '))
+jogar = str(input(f'Sua pontuação dessa vez foi de \033[0;33m{pontos}\033[0m reais\nVocê quer jogar(de novo)? S/N '))
 if jogar in 'Ss':
     pontos = 0
 else:
