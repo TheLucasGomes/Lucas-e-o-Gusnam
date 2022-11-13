@@ -29,6 +29,13 @@ sleep(1)
 print('vamos começar?\n')
 sleep(1)
 while pontos < 1000000:
+    jogar = str(input('Você quer jogar(de novo)? S/N '))
+    if jogar == 'S':
+        pontos = 0
+    else:
+        pontos = -1
+        if pontos == -1:
+            break
     if pontos == 0:
         print(f'{"-"*45}\nVamos começar com as questões de nivel {niveis[0]}\n{"-"*45}\n')
         sleep(2)
@@ -186,5 +193,8 @@ while pontos < 1000000:
                     break
                 if key_word == 'babana':
                     break
+        if pontos == 1000000:
+            print('MEUS PARABÉNS, VOCÊ VENCEU!!!')
+        
         if key_word == 'babana':
             break
