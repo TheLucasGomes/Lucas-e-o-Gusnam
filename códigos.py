@@ -29,15 +29,8 @@ sleep(1)
 print('vamos começar?\n')
 sleep(1)
 while pontos < 1000000:
-    jogar = str(input('Você quer jogar(de novo)? S/N '))
-    if jogar == 'S':
-        pontos = 0
-    else:
-        pontos = -1
-        if pontos == -1:
-            break
     if pontos == 0:
-        print(f'{"-"*45}\nVamos começar com as questões de nivel {niveis[0]}\n{"-"*45}\n')
+        print(f'{"-" * 45}\nVamos começar com as questões de nivel {niveis[0]}\n{"-" * 45}\n')
         sleep(2)
     if 0 <= pontos < 5000:
         print(f'PONTUAÇÃO ATUAL: \033[0;33m{pontos}\033[0m')
@@ -65,7 +58,7 @@ while pontos < 1000000:
                 if ajudas > 0:
                     ajudas -= 1
                     ajd = funcoes.gera_ajuda(quest1)
-                    print(f'\033[0;36m{ajd}\033[0Fm')
+                    print(f'\033[0;36m{ajd}\033[0m')
                 else:
                     print('sem ajudas restantes')
                     print(prints)
@@ -91,7 +84,7 @@ while pontos < 1000000:
 
     elif 5000 <= pontos < 100000:
         if pontos == 5000:
-            print(f'{"-"*47}\nVamos continuar com as questões de nivel {niveis[1]}\n{"-"*47}')
+            print(f'{"-" * 47}\nVamos continuar com as questões de nivel {niveis[1]}\n{"-" * 47}')
             sleep(2)
         if 5000 <= pontos < 100000:
             print(f'PONTUAÇÃO ATUAL: \033[0;33m{pontos}\033[0m')
@@ -119,7 +112,7 @@ while pontos < 1000000:
                     if ajudas > 0:
                         ajudas -= 1
                         ajd = funcoes.gera_ajuda(quest1)
-                        print(f'\033[0;36m{ajd}\033[0Fm')
+                        print(f'\033[0;36m{ajd}\033[0m')
                     else:
                         print('sem ajudas restantes')
                         print(prints)
@@ -144,7 +137,7 @@ while pontos < 1000000:
             break
     elif 100000 <= pontos < 1000000:
         if pontos == 100000:
-            print(f'{"-"*49}\nVamos continuar com as questões de nivel {niveis[2]}\n{"-"*49}')
+            print(f'{"-" * 49}\nVamos continuar com as questões de nivel {niveis[2]}\n{"-" * 49}')
             sleep(2)
         if 100000 <= pontos < 1000000:
             print(f'PONTUAÇÃO ATUAL: \033[0;33m{pontos}\033[0m')
@@ -172,7 +165,7 @@ while pontos < 1000000:
                     if ajudas > 0:
                         ajudas -= 1
                         ajd = funcoes.gera_ajuda(quest1)
-                        print(f'\033[0;36m{ajd}\033[0Fm')
+                        print(f'\033[0;36m{ajd}\033[0m')
                     else:
                         print('sem ajudas restantes')
                         print(prints)
@@ -195,6 +188,13 @@ while pontos < 1000000:
                     break
         if pontos == 1000000:
             print('MEUS PARABÉNS, VOCÊ VENCEU!!!')
-        
+
         if key_word == 'babana':
             break
+jogar = str(input(f'Sua pontuação dessa vez foi de \033[0;33m{pontos}\033[0m reais\nVocê quer jogar(de novo)? S/N '))
+if jogar in 'Ss':
+    pontos = 0
+else:
+    pontos = -1
+    if pontos == -1:
+        print('volte sempre!')
