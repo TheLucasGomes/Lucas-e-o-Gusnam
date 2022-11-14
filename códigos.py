@@ -50,6 +50,7 @@ while pontos < 1000000:
                 break
             elif rus == 'S' or rus == 's':
                 key_word = 'babana'
+                print(f'Parabens {jogador}, você ficou com \033[0;33m{pontos}\033[0m reais\n')
                 break
             elif key_word == 'babana':
                 break
@@ -102,6 +103,7 @@ while pontos < 1000000:
                     break
                 elif rus == 'S' or rus == 's':
                     key_word = 'babana'
+                    print(f'Parabens {jogador}, você ficou com \033[0;33m{pontos}\033[0m reais\n')
                     break
                 elif key_word == 'babana':
                     break
@@ -153,6 +155,7 @@ while pontos < 1000000:
                     break
                 elif rus == 'S' or rus == 's':
                     key_word = 'babana'
+                    print(f'Parabens {jogador}, você ficou com \033[0;33m{pontos}\033[0m reais\n')
                     break
                 elif key_word == 'babana':
                     break
@@ -182,13 +185,13 @@ while pontos < 1000000:
                 if key_word == 'babana':
                     break
         if pontos == 1000000:
-            print('MEUS PARABÉNS, VOCÊ VENCEU!!!')
+            print(f'MEUS PARABÉNS {jogador}, VOCÊ VENCEU!!!')
             key_word = 'babana'
 
     if key_word == 'babana':
         if pontos != 1000000:
             pontos = 0
-        jogar = str(input(f'você ficou com \033[0;33m{pontos}\033[0m reais\nVocê quer jogar(de novo)? S/N '))
+        jogar = str(input('Você quer jogar(de novo)? S/N '))
         if jogar in 'Ss':
             cont_pontos = 0
             pontos = 0
@@ -196,5 +199,5 @@ while pontos < 1000000:
             ajudas = 3
             key_word = 'ba'
         else:
-            print('volte sempre!')
+            print(f'Volte sempre {jogador}!')
             break
