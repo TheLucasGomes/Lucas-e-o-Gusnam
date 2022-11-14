@@ -192,7 +192,7 @@ while pontos < 1000000:
             pontos = 0
             pulos = 2
             ajudas = 3
-            key_word = 'bah'
+            key_word = 'ba'
         else:
             print('volte sempre!')
             break
