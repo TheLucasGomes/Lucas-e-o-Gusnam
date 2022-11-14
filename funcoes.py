@@ -18,6 +18,8 @@ def transforma_base(l):
                         d.append(l[q])
 
         return result
+
+
 # Transforma lista de questões em dicionario
 
 
@@ -81,6 +83,8 @@ def valida_questao(d1):
                     saida['correta'] = 'valor_errado'
     print(saida)
     return saida
+
+
 # Confere se a questão esta em formato correto
 
 
@@ -89,6 +93,8 @@ def valida_questoes(lista1):
     for c in range(0, len(lista1)):
         lista2.append(valida_questao(lista1[c]))
     return lista2
+
+
 # valida toda uma lista de questões
 
 
@@ -98,8 +104,10 @@ def sorteia_questao(dq, nivel):
     for k, v in dq.items():
         if k == nivel:
             lr = v
-            posicao = randint(0, len(v)-1)
+            posicao = randint(0, len(v) - 1)
     return lr[posicao]
+
+
 # sorteia uma questão de um nível escolhido
 
 
@@ -109,6 +117,8 @@ def sorteia_questao_inedida(dq, nivel, lista1):
         escolha = sorteia_questao(dq, nivel)
     lista1.append(escolha)
     return escolha
+
+
 # sorteia uma questão de nivel escolhido sem repetir
 
 
@@ -131,9 +141,11 @@ def questao_para_texto(dq, n):
                     C = b
                 elif a == 'D':
                     D = b
-    retorno = f'{"-"*40}\nQUESTAO {n}\n\n{questao}\n\nRESPOSTAS:\nA: {A}\nB: {B}\nC: {C}\nD: {D}\n'
+    retorno = f'{"-" * 40}\nQUESTAO {n}\n\n{questao}\n\nRESPOSTAS:\nA: {A}\nB: {B}\nC: {C}\nD: {D}\n'
     print(retorno)
     return retorno
+
+
 # Transforma o dicionário de uma questão em string de formato apropriado
 
 
@@ -159,6 +171,8 @@ def gera_ajuda(dq):
     elif n_dicas == 2:
         dica = f'DICA:\nOpções certamente erradas: {erradas[random1]} | {erradas[random2]}'
     return dica  # funções e imports
+
+
 # Dá uma dica com base em uma questão
 
 
@@ -328,5 +342,107 @@ quest = [{'titulo': 'Qual o resultado da operação 57 + 32?',
           'nivel': 'dificil',
           'opcoes': {'A': 'Uma banda de Rock', 'B': 'Uma marca de luxo', 'C': 'Cidade Francesa',
                      'D': 'Morte de tecido orgânico'},
-          'correta': 'D'}
+          'correta': 'D'},
+
+         {'titulo': 'Em qual estado a água é chamada de gelo?',
+          'nivel': 'facil',
+          'opcoes': {'A': 'Plasma', 'B': 'Gasoso', 'C': 'Líquido',
+                     'D': 'Sólido'},
+          'correta': 'D'},
+         {'titulo': 'Quem era a namorada do Mickey Mouse?',
+          'nivel': 'facil',
+          'opcoes': {'A': 'A pequena sereia', 'B': 'Olivia Palito', 'C': 'Princesa Peach',
+                     'D': 'Minnie'},
+          'correta': 'D'},
+         {'titulo': 'Qual personagem do folclore tinha uma perna só e pregava peças?',
+          'nivel': 'facil',
+          'opcoes': {'A': 'Boitatá', 'B': 'Dinossauro', 'C': 'Saci Pererê',
+                     'D': 'Cuca'},
+          'correta': 'D'},
+         {'titulo': 'O que era o Frankenstein?',
+          'nivel': 'facil',
+          'opcoes': {'A': 'Um gorila', 'B': 'Um monstro', 'C': 'Um sapo',
+                     'D': 'Um continente'},
+          'correta': 'B'},
+         {'titulo': 'Quem fundou a montadora Ford?',
+          'nivel': 'facil',
+          'opcoes': {'A': 'Henry Ford', 'B': 'Gerald Ford', 'C': 'Anna Ford',
+                     'D': 'Harryson Ford'},
+          'correta': 'A'},
+         {'titulo': 'A água ferve em qual temperatura?',
+          'nivel': 'facil',
+          'opcoes': {'A': '96 graus', 'B': '105 graus', 'C': '200 graus',
+                     'D': '100 graus'},
+          'correta': 'D'},
+         {'titulo': 'Em que país a cidade de Pompeia, soterrada por um vulcão, ficava?',
+          'nivel': 'medio',
+          'opcoes': {'A': 'Japão', 'B': 'México', 'C': 'Itália',
+                     'D': 'Brasil'},
+          'correta': 'C'},
+         {'titulo': 'Qual profissional utiliza um formão?',
+          'nivel': 'medio',
+          'opcoes': {'A': 'Carpinteiro', 'B': 'Eletrecista', 'C': 'Bombeiro',
+                     'D': 'Policial'},
+          'correta': 'A'},
+         {'titulo': 'Como eram chamados os pilotos suícidas japonêses?',
+          'nivel': 'medio',
+          'opcoes': {'A': 'sashimis', 'B': 'sumôs', 'C': 'bakugous',
+                     'D': 'kamikases'},
+          'correta': 'D'},
+         {'titulo': 'O que é uma gôndola?',
+          'nivel': 'medio',
+          'opcoes': {'A': 'Embarcação', 'B': 'Brinquedo', 'C': 'Musica',
+                     'D': 'Símbolo'},
+          'correta': 'A'},
+         {'titulo': 'De qual país é originado o sashimi?',
+          'nivel': 'medio',
+          'opcoes': {'A': 'Coreia do Sul', 'B': 'China', 'C': 'Japão',
+                     'D': 'Filipinas'},
+          'correta': 'C'},
+         {'titulo': 'Onde é praticado o alpinismo?',
+          'nivel': 'medio',
+          'opcoes': {'A': 'cavernas', 'B': 'mares', 'C': 'montanhas',
+                     'D': 'planaltos'},
+          'correta': 'C'},
+         {'titulo': 'O Coliseu é um monumento presente em qual atual país da Europa?',
+          'nivel': 'medio',
+          'opcoes': {'A': 'França', 'B': 'Itália', 'C': 'Alemanha',
+                     'D': 'Império Romano'},
+          'correta': 'B'},
+         {'titulo': 'Qual desses países não é asiático?',
+          'nivel': 'dificil',
+          'opcoes': {'A': 'Paquistão', 'B': 'Japão', 'C': 'Rússia',
+                     'D': 'Egito'},
+          'correta': 'D'},
+         {'titulo': 'Qual a primeira letra do alfabeto grego?',
+          'nivel': 'dificil',
+          'opcoes': {'A': 'Beta', 'B': 'Teta', 'C': 'Gamma',
+                     'D': 'Alpha'},
+          'correta': 'D'},
+         {'titulo': 'Bhrama é o deus de qual religião?',
+          'nivel': 'dificil',
+          'opcoes': {'A': 'Budismo', 'B': 'Cristianismo', 'C': 'Alcoolismo',
+                     'D': 'Hinduismo'},
+          'correta': 'D'},
+         {'titulo': 'Ramo da pecuária referente à cabras e bodes?',
+          'nivel': 'dificil',
+          'opcoes': {'A': 'Suíno', 'B': 'Bovino', 'C': 'Caprino',
+                     'D': 'Bodino'},
+          'correta': 'C'},
+         {'titulo': 'Qual o maior oceano do mundo?',
+          'nivel': 'dificil',
+          'opcoes': {'A': 'Ártico', 'B': 'Pacífico', 'C': 'Atlântico',
+                     'D': 'Índico'},
+          'correta': 'B'},
+         {'titulo': 'Conflito político-ideológico entre EUA e URSS?',
+          'nivel': 'dificil',
+          'opcoes': {'A': 'Guerra nas Estrelas', 'B': 'Guerra do Vietnã', 'C': 'Guerra Fria',
+                     'D': 'Segunda Guerra Mundial'},
+          'correta': 'C'},
+         {'titulo': 'Qual o nome científico de uma bola de gelo e poeira que orbita o Sol?',
+          'nivel': 'dificil',
+          'opcoes': {'A': 'Cometa', 'B': 'Meteorito', 'C': 'Asteroide',
+                     'D': 'Estrela Irmã'},
+          'correta': 'A'}
+
          ]

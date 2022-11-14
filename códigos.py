@@ -37,11 +37,10 @@ while pontos < 1000000:
         quest1 = funcoes.sorteia_questao_inedida(lista_niveis, 'facil', lista1)
         prints = funcoes.questao_para_texto(quest1, cont)
         while 0 <= pontos < 5000:
-
             rus = str(input(f'''para dica digite "J" ({ajudas} restantes)
     para pular questão digite "P" ({pulos} restantes)
     para parar o jogo digite "S"\n
-    Digite qual opção você acha que é a certa:'''))
+    Digite qual opção você acha que é a certa:''')).upper()
             if rus == quest1['correta']:
                 pontos = lista_pontos[cont_pontos]
                 cont_pontos += 1
@@ -79,8 +78,6 @@ while pontos < 1000000:
                 break
             if key_word == 'babana':
                 break
-    if key_word == 'babana':
-        break
 
     elif 5000 <= pontos < 100000:
         if pontos == 5000:
@@ -95,7 +92,7 @@ while pontos < 1000000:
                 rus = str(input(f'''para dica digite "J" ({ajudas} restantes)
         para pular questão digite "P" ({pulos} restantes)
         para parar o jogo digite "S"\n
-        Digite qual opção você acha que é a certa:'''))
+        Digite qual opção você acha que é a certa:''')).upper()
                 if rus == quest1['correta']:
                     pontos = lista_pontos[cont_pontos]
                     cont_pontos += 1
@@ -133,8 +130,6 @@ while pontos < 1000000:
                     break
                 if key_word == 'babana':
                     break
-        if key_word == 'babana':
-            break
     elif 100000 <= pontos < 1000000:
         if pontos == 100000:
             print(f'{"-" * 49}\nVamos continuar com as questões de nivel {niveis[2]}\n{"-" * 49}')
@@ -148,7 +143,7 @@ while pontos < 1000000:
                 rus = str(input(f'''para dica digite "J" ({ajudas} restantes)
         para pular questão digite "P" ({pulos} restantes)
         para parar o jogo digite "S"\n
-        Digite qual opção você acha que é a certa:'''))
+        Digite qual opção você acha que é a certa:''')).upper()
                 if rus == quest1['correta']:
                     pontos = lista_pontos[cont_pontos]
                     cont_pontos += 1
@@ -188,13 +183,16 @@ while pontos < 1000000:
                     break
         if pontos == 1000000:
             print('MEUS PARABÉNS, VOCÊ VENCEU!!!')
+            key_word = 'babana'
 
-        if key_word == 'babana':
+    if key_word == 'babana':
+        jogar = str(input(f'Sua pontuação dessa vez foi de \033[0;33m{pontos}\033[0m reais\nVocê quer jogar(de novo)? S/N '))
+        if jogar in 'Ss':
+            cont_pontos = 0
+            pontos = 0
+            pulos = 2
+            ajudas = 3
+            key_word = 'bah'
+        else:
+            print('volte sempre!')
             break
-jogar = str(input(f'Sua pontuação dessa vez foi de \033[0;33m{pontos}\033[0m reais\nVocê quer jogar(de novo)? S/N '))
-if jogar in 'Ss':
-    pontos = 0
-else:
-    pontos = -1
-    if pontos == -1:
-        print('volte sempre!')
