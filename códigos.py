@@ -186,7 +186,9 @@ while pontos < 1000000:
             key_word = 'babana'
 
     if key_word == 'babana':
-        jogar = str(input(f'Sua pontuação dessa vez foi de \033[0;33m{pontos}\033[0m reais\nVocê quer jogar(de novo)? S/N '))
+        if pontos != 1000000:
+            pontos = 0
+        jogar = str(input(f'você ficou com \033[0;33m{pontos}\033[0m reais\nVocê quer jogar(de novo)? S/N '))
         if jogar in 'Ss':
             cont_pontos = 0
             pontos = 0
