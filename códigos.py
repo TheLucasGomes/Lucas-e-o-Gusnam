@@ -4,8 +4,11 @@ from time import sleep
 pontos = 0
 niveis = []
 lista1 = []
-ajudas = 3
-pulos = 2
+lista_verify = []
+for c in range(0, len(funcoes.quest)):
+    lista_verify.append({})
+ajudas = 2
+pulos = 3
 cont = 1
 cont_pontos = 0
 key_word = ''
@@ -14,6 +17,13 @@ lista_niveis = funcoes.transforma_base(funcoes.quest)
 for k, v in lista_niveis.items():
     if k not in niveis:
         niveis.append(k)
+print('verificando questões...')
+sleep(2)
+if lista_verify == funcoes.valida_questoes(funcoes.quest):
+    print('Tudo certo')
+else:
+    print('\033[0;31mErro encontrado na lista de questões\033[0m')
+    exit()
 print('\033[0;31mOlá Bem vindo ao jogo da EP2 de desoft!\n\033[0m')
 jogador = str(input('\n\033[0;36mQual seu nome?\033[0m '))
 print(f'\033[0mOlá \033[0;35m{jogador}\033[0;m\n')
@@ -50,6 +60,7 @@ while pontos < 1000000:
                 break
             elif rus == 'S' or rus == 's':
                 key_word = 'babana'
+                print(f'Parabens {jogador}, você ficou com \033[0;33m{pontos}\033[0m reais\n')
                 break
             elif key_word == 'babana':
                 break
@@ -102,6 +113,7 @@ while pontos < 1000000:
                     break
                 elif rus == 'S' or rus == 's':
                     key_word = 'babana'
+                    print(f'Parabens {jogador}, você ficou com \033[0;33m{pontos}\033[0m reais\n')
                     break
                 elif key_word == 'babana':
                     break
@@ -153,6 +165,7 @@ while pontos < 1000000:
                     break
                 elif rus == 'S' or rus == 's':
                     key_word = 'babana'
+                    print(f'Parabens {jogador}, você ficou com \033[0;33m{pontos}\033[0m reais\n')
                     break
                 elif key_word == 'babana':
                     break
@@ -182,19 +195,19 @@ while pontos < 1000000:
                 if key_word == 'babana':
                     break
         if pontos == 1000000:
-            print('MEUS PARABÉNS, VOCÊ VENCEU!!!')
+            print(f'MEUS PARABÉNS \033[0;35m{jogador}\033[0m, VOCÊ VENCEU!!!')
             key_word = 'babana'
 
     if key_word == 'babana':
         if pontos != 1000000:
             pontos = 0
-        jogar = str(input(f'você ficou com \033[0;33m{pontos}\033[0m reais\nVocê quer jogar(de novo)? S/N '))
+        jogar = str(input('Você quer jogar(de novo)? S/N '))
         if jogar in 'Ss':
             cont_pontos = 0
             pontos = 0
-            pulos = 2
-            ajudas = 3
+            pulos = 3
+            ajudas = 2
             key_word = 'ba'
         else:
-            print('volte sempre!')
+            print(f'Volte sempre \033[0;35m{jogador}\033[0m!')
             break

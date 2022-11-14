@@ -81,7 +81,6 @@ def valida_questao(d1):
             if k == 'correta':
                 if v not in 'ABCD':
                     saida['correta'] = 'valor_errado'
-    print(saida)
     return saida
 
 
