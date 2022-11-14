@@ -12,6 +12,7 @@ pulos = 3
 cont = 1
 cont_pontos = 0
 key_word = ''
+aj = 's'
 lista_pontos = [1000, 5000, 10000, 30000, 50000, 100000, 300000, 500000, 1000000]
 lista_niveis = funcoes.transforma_base(funcoes.quest)
 for k, v in lista_niveis.items():
@@ -53,6 +54,7 @@ while pontos < 1000000:
     Digite qual opção você acha que é a certa:''')).upper()
             if rus == quest1['correta']:
                 pontos = lista_pontos[cont_pontos]
+                aj = 's'
                 cont_pontos += 1
                 print(rus)
                 print('Certa resposta!')
@@ -65,10 +67,13 @@ while pontos < 1000000:
             elif key_word == 'babana':
                 break
             elif rus == 'J' or rus == 'j':
-                if ajudas > 0:
+                if ajudas > 0 and aj == 's':
                     ajudas -= 1
+                    aj = 'n'
                     ajd = funcoes.gera_ajuda(quest1)
                     print(f'\033[0;36m{ajd}\033[0m')
+                elif aj == 'n' and ajudas > 0:
+                    print('você ja pediu ajuda nesta questão')
                 else:
                     print('sem ajudas restantes')
                     print(prints)
@@ -82,6 +87,8 @@ while pontos < 1000000:
                 else:
                     print('Acabaram os pulos')
                     print(prints)
+            elif rus not in 'ABCD':
+                print('\033[0;31mescolha uma das opções acima\033[0m')
             else:
                 print(rus)
                 print('Errou')
@@ -106,6 +113,7 @@ while pontos < 1000000:
         Digite qual opção você acha que é a certa:''')).upper()
                 if rus == quest1['correta']:
                     pontos = lista_pontos[cont_pontos]
+                    aj = 's'
                     cont_pontos += 1
                     print(rus)
                     print('Certa resposta!')
@@ -118,10 +126,13 @@ while pontos < 1000000:
                 elif key_word == 'babana':
                     break
                 elif rus == 'J' or rus == 'j':
-                    if ajudas > 0:
+                    if ajudas > 0 and aj == 's':
                         ajudas -= 1
+                        aj = 'n'
                         ajd = funcoes.gera_ajuda(quest1)
                         print(f'\033[0;36m{ajd}\033[0m')
+                    elif aj == 'n' and ajudas > 0:
+                        print('você ja pediu ajuda nesta questão')
                     else:
                         print('sem ajudas restantes')
                         print(prints)
@@ -135,6 +146,8 @@ while pontos < 1000000:
                     else:
                         print('Acabaram os pulos')
                         print(prints)
+                elif rus not in 'ABCD':
+                    print('\033[0;31mescolha uma das opções acima\033[0m')
                 else:
                     print(rus)
                     print('Errou')
@@ -158,6 +171,7 @@ while pontos < 1000000:
         Digite qual opção você acha que é a certa:''')).upper()
                 if rus == quest1['correta']:
                     pontos = lista_pontos[cont_pontos]
+                    aj = 's'
                     cont_pontos += 1
                     print(rus)
                     print('Certa resposta!')
@@ -170,10 +184,13 @@ while pontos < 1000000:
                 elif key_word == 'babana':
                     break
                 elif rus == 'J' or rus == 'j':
-                    if ajudas > 0:
+                    if ajudas > 0 and aj == 's':
                         ajudas -= 1
+                        aj = 'n'
                         ajd = funcoes.gera_ajuda(quest1)
                         print(f'\033[0;36m{ajd}\033[0m')
+                    elif aj == 'n' and ajudas > 0:
+                        print('você ja pediu ajuda nesta questão')
                     else:
                         print('sem ajudas restantes')
                         print(prints)
@@ -187,6 +204,8 @@ while pontos < 1000000:
                     else:
                         print('Acabaram os pulos')
                         print(prints)
+                elif rus not in 'ABCD':
+                    print('\033[0;31mescolha uma das opções acima\033[0m')
                 else:
                     print(rus)
                     print('Errou')
@@ -204,6 +223,7 @@ while pontos < 1000000:
         jogar = str(input('Você quer jogar(de novo)? S/N '))
         if jogar in 'Ss':
             cont_pontos = 0
+            aj = 's'
             pontos = 0
             pulos = 3
             ajudas = 2
