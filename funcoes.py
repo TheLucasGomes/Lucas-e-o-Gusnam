@@ -444,4 +444,4 @@ quest = [{'titulo': 'Qual o resultado da operação 57 + 32?',
                      'D': 'Estrela Irmã'},
           'correta': 'A'}
 
-         ]
+         ]  # parte das questões vieram do arquivo disponibilizado na academia python no exemplo de macielcaleb
