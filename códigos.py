@@ -40,7 +40,7 @@ print('vamos começar?\n')
 sleep(1)
 while pontos < 1000000:
     if pontos == 0:
-        print(f'{"-" * 45}\nVamos começar com as questões de nivel {niveis[0]}\n{"-" * 45}\n')
+        print(f'{"-" * 45}\nVamos começar com as questões de nivel \n\033[0;36m{niveis[0]}\n\033[0m\n{"-" * 45}\n')
         sleep(2)
     if 0 <= pontos < 5000:
         print(f'PONTUAÇÃO ATUAL: \033[0;33m{pontos}\033[0m')
@@ -92,7 +92,7 @@ while pontos < 1000000:
 
     elif 5000 <= pontos < 100000:
         if pontos == 5000:
-            print(f'{"-" * 47}\nVamos continuar com as questões de nivel {niveis[1]}\n{"-" * 47}')
+            print(f'{"-" * 47}\nVamos continuar com as questões de nivel \n\033[0;36m{niveis[1]}\n\033[0m\n{"-" * 47}')
             sleep(2)
         if 5000 <= pontos < 100000:
             print(f'PONTUAÇÃO ATUAL: \033[0;33m{pontos}\033[0m')
@@ -144,7 +144,7 @@ while pontos < 1000000:
                     break
     elif 100000 <= pontos < 1000000:
         if pontos == 100000:
-            print(f'{"-" * 49}\nVamos continuar com as questões de nivel {niveis[2]}\n{"-" * 49}')
+            print(f'{"-" * 49}\nVamos continuar com as questões de nivel \n\033[0;36m{niveis[2]}\n\033[0m\n{"-" * 49}')
             sleep(2)
         if 100000 <= pontos < 1000000:
             print(f'PONTUAÇÃO ATUAL: \033[0;33m{pontos}\033[0m')

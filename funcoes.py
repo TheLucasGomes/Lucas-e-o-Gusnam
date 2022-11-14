@@ -118,7 +118,7 @@ def sorteia_questao_inedida(dq, nivel, lista1):
     return escolha
 
 
-# sorteia uma questão de nivel escolhido sem repetir
+# sorteia uma questão de nivel escolhido sem repetir escolhas
 
 
 def questao_para_texto(dq, n):
